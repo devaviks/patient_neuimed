@@ -20,7 +20,7 @@ class _nextpageState extends State<nextpage> {
               child: SizedBox(
               child: Image(
               image:
-                AssetImage('images/logo.png'),
+                AssetImage('assets/images/logo.png'),
                 height: 100,
               ),
               ),

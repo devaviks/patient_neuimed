@@ -13,7 +13,7 @@ class _nextpageState extends State<nextpage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-            padding: const EdgeInsets.only(top: 50),
+            padding:  EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.21),
             child: Column(
               children: <Widget>[
               const Center(

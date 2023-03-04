@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patient_neuimed/login.dart';
+import 'package:patient_neuimed/startscreenone.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
         Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => nextpage()),
+        MaterialPageRoute(builder: (context) => StartPage()),
         );
         },
         child: const Icon(Icons.keyboard_double_arrow_right),

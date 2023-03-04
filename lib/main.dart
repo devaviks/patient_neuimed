@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:patient_neuimed/startscreenone.dart';
+import 'package:patient_neuimed/splashscreen.dart';
+
 
 void main() {
   runApp(const MyApp());

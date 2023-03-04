@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
         Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => StartPage()),
+        MaterialPageRoute(builder: (context) => SplashPage()),
         );
         },
         child: const Icon(Icons.keyboard_double_arrow_right),

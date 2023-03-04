@@ -16,19 +16,27 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       body:
           Padding(
-            padding:  EdgeInsets.all(MediaQuery.of(context).size.height * 0.05),
+            padding:  EdgeInsets.only(left: MediaQuery.of(context).size.height * 0.03,
+                right: MediaQuery.of(context).size.height * 0.03,
+                top: MediaQuery.of(context).size.height * 0.07,
+            ),
         child: Column(
         children: [
           Center(
               child: Image(
+
                 image:
-                AssetImage('images/logo.png'),
+                AssetImage('assets/images/logo.png'),
                 height: 100,
               )
           ),
-          Container(
-            width: 330,
-            height: 330,
+
+            Padding(
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
+              child: Container(
+
+            width: 315,
+            height: 315,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -37,28 +45,36 @@ class _StartPageState extends State<StartPage> {
               ),
             ),
           ),
+    ),
 
-
-            Align(
-            alignment: Alignment.center,
+          Padding(
+              padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03)
+          ),
+            Center(
             child: Text(
               "Book an appointment with the right doctor.",
               style: GoogleFonts.josefinSans(
                 textStyle: TextStyle(
-                  color: Color(0xff164276),
+                  color: Color(0xff0A345E),
                   fontWeight: FontWeight.w600,
-                  fontSize: 20,
+                  fontSize: 24,
                 ),
-
               ),
             ),
+          ),
+          Padding(
+              padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.18)
           ),
           Row(
               children : <Widget>[
                 SizedBox(
                     height:50, //height of button
-                    width:165,
+                    width:161,
                     child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white, // change background color of button
+                          backgroundColor: const Color(0xff0A345E), // change text color of button
+                        ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
                               builder: (context) => nextpage());
@@ -68,10 +84,22 @@ class _StartPageState extends State<StartPage> {
                     )
     ),
 
+
+                
+                
+                
+                
+                Padding(
+                    padding: EdgeInsets.only(right: 20)
+                ),
                 SizedBox(
                     height:50, //height of button
-                    width:165,
+                    width:161,
                     child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white, // change background color of button
+                          backgroundColor: const Color(0xff0A345E), // change text color of button
+                        ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
                               builder: (context) => nextpage());
@@ -81,7 +109,20 @@ class _StartPageState extends State<StartPage> {
                     )
                 ),
                 ],
-              )
+              ),
+          Container(
+            padding: const EdgeInsets.all(14),
+            child: Text(
+              "Are you Interested? Register here!",
+              style: GoogleFonts.josefinSans(
+                textStyle: const TextStyle(
+                  color: Color(0xff0A345E),
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          ),
         ],
       )
           )

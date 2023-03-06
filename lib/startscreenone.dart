@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient_neuimed/login.dart';
+import 'package:patient_neuimed/signup.dart';
 
 
 class StartPage extends StatefulWidget {
@@ -14,15 +14,15 @@ class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-          Padding(
+      body: SingleChildScrollView(
+          child: Padding(
             padding:  EdgeInsets.only(left: MediaQuery.of(context).size.height * 0.03,
                 right: MediaQuery.of(context).size.height * 0.03,
                 top: MediaQuery.of(context).size.height * 0.07,
             ),
         child: Column(
         children: [
-          Center(
+          const Center(
               child: Image(
 
                 image:
@@ -37,7 +37,7 @@ class _StartPageState extends State<StartPage> {
 
             width: 315,
             height: 315,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
                   image: AssetImage('assets/images/patient.jpg'),
@@ -54,7 +54,7 @@ class _StartPageState extends State<StartPage> {
             child: Text(
               "Book an appointment with the right doctor.",
               style: GoogleFonts.josefinSans(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   color: Color(0xff0A345E),
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -77,10 +77,10 @@ class _StartPageState extends State<StartPage> {
                         ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) => nextpage());
+                              builder: (context) => const RegisterPage());
                           Navigator.push(context, route);
                         },
-                        child: Text("Sign in")
+                        child: const Text("Sign in")
                     )
     ),
 
@@ -89,7 +89,7 @@ class _StartPageState extends State<StartPage> {
                 
                 
                 
-                Padding(
+                const Padding(
                     padding: EdgeInsets.only(right: 20)
                 ),
                 SizedBox(
@@ -102,10 +102,10 @@ class _StartPageState extends State<StartPage> {
                         ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) => nextpage());
+                              builder: (context) => const RegisterPage());
                           Navigator.push(context, route);
                           },
-                        child: Text("Get Started")
+                        child: const Text("Get Started")
                     )
                 ),
                 ],
@@ -126,6 +126,7 @@ class _StartPageState extends State<StartPage> {
         ],
       )
           )
+      )
     );
   }
 }

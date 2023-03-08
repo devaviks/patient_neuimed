@@ -11,10 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Neuimed Patient',
-      home: MyHomePage(title: 'Welcome to Neuimed'),
+      theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            color: Color(0xFF0A345E),
+          )),
+      home: const MyHomePage(title: 'Welcome to Neuimed'),
     );
   }
 }

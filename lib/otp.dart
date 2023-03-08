@@ -36,7 +36,7 @@ class _OtpPageState extends State<OtpPage> {
       ),
     ),
     Padding(
-    padding:  EdgeInsets.only(left: 25, right: 25, bottom: 10),
+    padding:  const EdgeInsets.only(left: 25, right: 25, bottom: 10),
     child:
      Text(
     "Join us now to use all of our services from one app.",
@@ -148,7 +148,10 @@ class OtpInput extends StatelessWidget {
         maxLength: 1,
         cursorColor: Theme.of(context).primaryColor,
         decoration: const InputDecoration(
-            border: OutlineInputBorder(),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(
+                  width: 2, color: Colors.green),
+            ),
             counterText: '',
             hintStyle: TextStyle(color: Colors.black, fontSize: 20.0)),
         onChanged: (value) {

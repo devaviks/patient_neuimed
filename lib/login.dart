@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/forgot.dart';
 
 class nextpage extends StatefulWidget {
   const nextpage({super.key});
@@ -67,7 +68,7 @@ class _nextpageState extends State<nextpage> {
                   ),
                 ),
                 SizedBox(
-                    height:50, //height of button
+                    height:52, //height of button
                     width:342, //width of button
                     child:
                     ElevatedButton(
@@ -76,7 +77,11 @@ class _nextpageState extends State<nextpage> {
                         backgroundColor: const Color(0xff0A345E), // change text color of button
                       ),
                       child: const Text('Login'),
-                      onPressed: () {},
+                      onPressed: () {
+                        Route route = MaterialPageRoute(
+                            builder: (context) => const ForgotPage());
+                        Navigator.push(context, route);
+                      },
                     ),
                 ),
                 Container(

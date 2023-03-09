@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scroll_date_picker/scroll_date_picker.dart';
 
-import 'maintab.dart';
+import 'gender.dart';
+
 
 class DobPage extends StatefulWidget {
   const DobPage({super.key});
@@ -11,7 +12,7 @@ class DobPage extends StatefulWidget {
   _DobPageState createState() => _DobPageState();
 }
 class _DobPageState extends State<DobPage> {
-  DateTime _selectedDate = DateTime.now();
+  DateTime? chosenDateTime;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +24,8 @@ class _DobPageState extends State<DobPage> {
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.55,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.amber,
+                decoration: const BoxDecoration(
+                  color: Color(0xff0A345E),
               ),
                 child: Center(
                 child: Text(
@@ -32,8 +33,8 @@ class _DobPageState extends State<DobPage> {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
-                      color: Color(0xff0A345E),
-                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
                       fontSize: 24,
                     ),
                   ),
@@ -41,44 +42,24 @@ class _DobPageState extends State<DobPage> {
                 )
             )
             ),
-
-            Container(
-              height: 100.0,
-              alignment: Alignment.center,
-              child: Text(
-                "$_selectedDate",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
-              ),
-            ),
-            Container(
-              alignment: Alignment.centerRight,
-              padding: const EdgeInsets.only(right: 48),
-              child: TextButton(
-                onPressed: () {
-                  setState(() {
-                    _selectedDate = DateTime.now();
-                  });
+            SizedBox(
+              height: MediaQuery.of(context).copyWith().size.height * 0.32,
+                child: CupertinoDatePicker(
+                mode: CupertinoDatePickerMode.date,
+                onDateTimeChanged: (value) {
+                  chosenDateTime = value;
+                  print(chosenDateTime);
                 },
-                child: Text(
-                  "TODAY's Date and Time",
-                  style: TextStyle(color: Colors.red),
+                initialDateTime: DateTime.now(),
+                minimumYear: 1900,
+                maximumYear: 3000,
                 ),
               ),
-            ),
-            SizedBox(
-              height: 250,
-              child: ScrollDatePicker(
-                selectedDate: _selectedDate,
-                locale: Locale('en'),
-                onDateTimeChanged: (DateTime value) {
-                  setState(() {
-                    _selectedDate = value;
-                  });
-                },
-              ),
-            ),
 
-            SizedBox(
+
+
+            Padding(padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
+            child: SizedBox(
               height:52, //height of button
               width:342, //width of button
               child:
@@ -90,10 +71,11 @@ class _DobPageState extends State<DobPage> {
                 child: const Text('Save'),
                 onPressed: () {
                   Route route = MaterialPageRoute(
-                      builder: (context) => const TabBarDemo());
+                      builder: (context) => const GenderPage());
                   Navigator.push(context, route);
                 },
               ),
+            ),
             ),
 
 

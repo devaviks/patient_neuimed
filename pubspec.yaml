@@ -41,6 +41,7 @@ dependencies:
   dropdown_button2: ^2.0.0
   pinput: ^2.2.31
   scroll_date_picker: ^3.6.1
+  fluttertoast: ^8.2.1
 
 dev_dependencies:
   flutter_test:
@@ -84,7 +85,7 @@ flutter:
      - family: Roboto
        fonts:
          - asset: assets/fonts/Roboto-Black.ttf
-         - asset: assets/fonts/Roboto-Italic.ttf
+         - asset: assets/fonts/Roboto-Regular.ttf
            style: normal
 
   #

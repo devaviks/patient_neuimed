@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'maintab.dart';
+import 'emergency.dart';
+
 
 class MaritalPage extends StatefulWidget {
   const MaritalPage({super.key});
@@ -112,7 +113,7 @@ class _MaritalPageState extends State<MaritalPage> {
                         child: const Text('Save'),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) => const TabBarDemo());
+                              builder: (context) => const EmergencyPage());
                           Navigator.push(context, route);
                         },
                       ),

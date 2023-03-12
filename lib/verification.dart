@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'otp.dart';
+import 'otp/otp.dart';
 
 class VerifyPage extends StatefulWidget {
   const VerifyPage({super.key});

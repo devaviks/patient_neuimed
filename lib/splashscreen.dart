@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:patient_neuimed/startscreenone.dart';
 
 
-
+void main() => runApp(const MaterialApp(debugShowCheckedModeBanner: false,home:SplashPage()));
 
 
 class SplashPage extends StatefulWidget {
@@ -13,9 +13,6 @@ class SplashPage extends StatefulWidget {
   _SplashPageState createState() => _SplashPageState();
 }
 
-
-
-
 class _SplashPageState extends State<SplashPage> {
   void initState() {
     // TODO: implement initState
@@ -24,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   startSplashScreenTimer() async { // Because we using Timer and it is a Future Object, we used async keyword
-    var duration = const Duration(seconds: 5);
+    var duration = const Duration(seconds: 3);
     return Timer(duration, navigationToNextPage);
 
   }
@@ -38,7 +35,7 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  const Scaffold(
         backgroundColor: Colors.amberAccent,
       body: Center(
           child: Image(

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:patient_neuimed/profile/lifestyle.dart';
+import 'package:patient_neuimed/profile/medical.dart';
+import 'package:patient_neuimed/profile/personal_container.dart';
+import 'dart:developer';
 import 'dob.dart';
 
 
@@ -14,8 +18,11 @@ class TabBarDemo extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
+            bottom: TabBar(
+              onTap: (index) {
+                log('xzcxzcxzcxzcxzczx $index');
+              },
+              tabs: const [
                 Tab(child: Text('Personal')),
                 Tab(child: Text('Medical')),
                 Tab(child: Text('Lifestyle')),
@@ -28,106 +35,23 @@ class TabBarDemo extends StatelessWidget {
 
             title: const Text('Profile'),
           ),
-          body: TabBarView(
-            children: [
-             Padding(
-               padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
-               child: Center(
-                 child: Container(
-                   decoration: BoxDecoration(
-                     color: Colors.white,
-                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                     boxShadow: [
-                       BoxShadow(
-                         color: Colors.grey.withOpacity(0.5),
-                         spreadRadius: 5,
-                         blurRadius: 7,
-                         offset: const Offset(0, 3),
-                       ),
-                     ],
-                   ),
-                   padding: EdgeInsets.all(15),
-                   child: const Text("Tania Debashak",
-                       style: TextStyle(fontSize: 18,
-                           color: Colors.deepPurple,
-                           fontWeight: FontWeight.normal),
-                       textAlign: TextAlign.left),
-                 ),
-               ),
-
-               ),
-
-
-
-              Padding(
-                padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
-                child: Container(
-                  height: 130.0,
-                  width: 352.0,
-                  color: Colors.transparent,
-                  margin: EdgeInsets.only(top: 25),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    padding: EdgeInsets.all(15),
-                    child: const Text("Debashak",
-                        style: TextStyle(fontSize: 18,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.normal),
-                        textAlign: TextAlign.left),
-                  ),
-                ),
-
-              ),
-
-              Padding(
-                padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
-                child: Container(
-                  height: 130.0,
-                  width: 352.0,
-                  color: Colors.transparent,
-                  margin: EdgeInsets.only(top: 25),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    padding: EdgeInsets.all(15),
-                    child: const Text("shak",
-                        style: TextStyle(fontSize: 18,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.normal),
-                        textAlign: TextAlign.left),
-                  ),
-                ),
-
-              ),
-             ],
+          body: const TabBarView(
+            children: <Widget>[
+              PersonalPage(),
+              MedicalPage(),
+              LifestylePage(),
+            ],
 
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DobPage()),
+              Fluttertoast.showToast(
+                  msg: "Index",
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.CENTER,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white,
+                  fontSize: 16.0
               );
             },
             child: const Icon(Icons.keyboard_double_arrow_right),

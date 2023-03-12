@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'bloodgroup.dart';
 
+
+
 class GenderPage extends StatefulWidget {
   const GenderPage({super.key});
 
@@ -10,6 +12,7 @@ class GenderPage extends StatefulWidget {
   _GenderPageState createState() => _GenderPageState();
 }
 class _GenderPageState extends State<GenderPage> {
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +44,7 @@ class _GenderPageState extends State<GenderPage> {
     ),
                   Row(
                     children: [
+
                   Padding(padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.18,
                   left: MediaQuery.of(context).size.height * 0.034,
                   right: MediaQuery.of(context).size.height * 0.01

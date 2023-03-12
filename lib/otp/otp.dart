@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient_neuimed/login.dart';
+import 'package:patient_neuimed/login/login.dart';
 
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
@@ -14,8 +14,6 @@ class _OtpPageState extends State<OtpPage> {
   final TextEditingController _fieldTwo = TextEditingController();
   final TextEditingController _fieldThree = TextEditingController();
   final TextEditingController _fieldFour = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {

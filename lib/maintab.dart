@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:patient_neuimed/profile/lifestyle.dart';
-import 'package:patient_neuimed/profile/medical.dart';
+import 'package:patient_neuimed/profile/lifestyle_container.dart';
+import 'package:patient_neuimed/profile/medical_container.dart';
 import 'package:patient_neuimed/profile/personal_container.dart';
 import 'dart:developer';
 import 'dob.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class PersonalDetails extends StatefulWidget {
   const PersonalDetails({super.key});
 
@@ -13,8 +14,11 @@ class _PersonalPageState extends State<PersonalDetails> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: MediaQuery.of(context).size.height * .25,
+        Padding(padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
+        child: Container(
+          padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
+          height: MediaQuery.of(context).size.height * .13,
+          width: MediaQuery.of(context).size.height * .40,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(5.0)),
@@ -27,33 +31,61 @@ class _PersonalPageState extends State<PersonalDetails> {
               ),
             ],
           ),
+
+
           child: Row(
             children: [
               SizedBox(
-                  height: MediaQuery.of(context).size.height * .15,
-                  width: MediaQuery.of(context).size.height * .15,
+                  height: MediaQuery.of(context).size.height * .10,
+                  width: MediaQuery.of(context).size.height * .10,
                   child: CircleAvatar(
-                    radius: 48, // Image radius
+                    radius: 50, // Image radius
                     child: Image.asset("assets/images/dp.png"),
                   )
               ),
               Container(
-                margin: const EdgeInsets.only(left: 10),
+                margin: const EdgeInsets.only(left: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("sdfdsfsd"),
-                    Text("sdfdsfsd"),
-                    Text("sdfdsfsd"),
-                    Text("sdfdsfsd"),
+                    Text("Chris Hemsworth",
+                    style: GoogleFonts.josefinSans(
+                    textStyle:const TextStyle(
+                    color: Color(0xff212121),
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14,
+                      height: 2.0,
+                    ),
+                    ),
+                    ),
+                    Text("+91 8546321565",
+                      style: GoogleFonts.josefinSans(
+                        textStyle:const TextStyle(
+                          color: Color(0xff707683),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          height:1.3,
+                        ),
+                      ),
+                    ),
+                    Text("chrishemsworth@gmail.com",
+                    style: GoogleFonts.josefinSans(
+                    textStyle:const TextStyle(
+                    color: Color(0xff219FFF),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    height:1.3,
+    ),
+    ),),
                   ],
 
                 ),
               )
             ],
           ),
+        ),
         )
-      ],
+    ]
     );
   }
 }

@@ -4,7 +4,10 @@ import 'package:patient_neuimed/profile/lifestyle_container.dart';
 import 'package:patient_neuimed/profile/medical_container.dart';
 import 'package:patient_neuimed/profile/personal_container.dart';
 import 'dart:developer';
-import 'dob.dart';
+
+import 'add_medical_history.dart';
+
+
 
 
 class TabBarDemo extends StatelessWidget {
@@ -30,11 +33,12 @@ class TabBarDemo extends StatelessWidget {
             ),
             leading: IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.format_align_left_rounded),
+              icon: const Icon(Icons.menu),
             ),
 
             title: const Text('Profile'),
-          ),
+            backgroundColor: Color(0xff0A345E),
+            ),
           body: const TabBarView(
             children: <Widget>[
               PersonalPage(),
@@ -53,8 +57,12 @@ class TabBarDemo extends StatelessWidget {
                   textColor: Colors.white,
                   fontSize: 16.0
               );
-            },
-            child: const Icon(Icons.keyboard_double_arrow_right),
+                Route route = MaterialPageRoute(
+                    builder: (context) => const AddhistoryPage());
+                Navigator.push(context, route);
+              },
+            child: const Icon(Icons.arrow_right_sharp),
+
           ),
         ),
       ),

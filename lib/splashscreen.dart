@@ -36,11 +36,11 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return  const Scaffold(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Color(0xff0A345E),
       body: Center(
           child: Image(
             image:
-            AssetImage('assets/images/logo.png'),
+            AssetImage('assets/images/neuimedLogo.png'),
             height: 100,
           )
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/profile/widgets/personal/personal_address.dart';
 import 'package:patient_neuimed/profile/widgets/personal/personal_details.dart';
+import 'package:patient_neuimed/profile/widgets/personal/personal_information.dart';
 
 class PersonalPage extends StatefulWidget {
   const PersonalPage({super.key});
@@ -14,7 +15,9 @@ class _PersonalPageState extends State<PersonalPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        PersonalDetails()
+        PersonalDetails(),
+        PersonalInfo(),
+        PersonalAddress()
       ],
     );
   }

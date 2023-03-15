@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/profile/widgets/medical/medical_information.dart';
 
 class MedicalPage extends StatefulWidget {
   const MedicalPage({super.key});
@@ -7,25 +7,17 @@ class MedicalPage extends StatefulWidget {
   @override
   _MedicalPageState createState() => _MedicalPageState();
 }
-class _MedicalPageState extends State<MedicalPage> {
 
+class _MedicalPageState extends State<MedicalPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          "Medical Tab",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.josefinSans(
-            textStyle: const TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-              fontSize: 24,
-            ),
-          ),
-        ),
-      ),
+    return Column(
+      children: [
+        MedicalInfo(),
+
+      ],
+
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'doctor_found.dart';
+
 
 class FindpharmPage extends StatefulWidget {
   const FindpharmPage({super.key});
@@ -16,7 +18,12 @@ class _FindpharmPageState extends State<FindpharmPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Route route = MaterialPageRoute(
+                builder: (context) =>
+                const DoctorfoundPage());
+            Navigator.push(context, route);
+          },
           icon: const Icon(Icons.arrow_back),
         ),
         title: Text("Find Pharmacy"),

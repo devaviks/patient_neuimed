@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/pop_up.dart';
 
 class BookslotPage extends StatefulWidget {
   const BookslotPage({super.key});
@@ -761,7 +762,7 @@ class _BookslotPageState extends State<BookslotPage> {
                         ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) => const BookslotPage());
+                              builder: (context) => PopupPage());
                           Navigator.push(context, route);
                         },
                       ),
@@ -793,7 +794,7 @@ class _BookslotPageState extends State<BookslotPage> {
                         ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) => const BookslotPage());
+                              builder: (context) => PopupPage());
                           Navigator.push(context, route);
                         },
                       ),

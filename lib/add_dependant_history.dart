@@ -254,7 +254,7 @@ class _AdddependentPageState extends State<AdddependentPage> {
                           onPressed: () {
                             Route route = MaterialPageRoute(
                                 builder: (context) =>
-                                const AppointPage());
+                                const ReminderAppointPage());
                             Navigator.push(context, route);
                           },
                           child: const Text("Save"))),
@@ -276,7 +276,7 @@ class _AdddependentPageState extends State<AdddependentPage> {
                           onPressed: () {
                             Route route = MaterialPageRoute(
                                 builder: (context) =>
-                                const AppointPage());
+                                const ReminderAppointPage());
                             Navigator.push(context, route);
                           },
                           child: const Text("Cancel"))),

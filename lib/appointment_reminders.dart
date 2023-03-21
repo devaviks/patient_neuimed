@@ -3,13 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'change_password.dart';
 
-class AppointPage extends StatefulWidget {
-  const AppointPage({super.key});
+class ReminderAppointPage extends StatefulWidget {
+  const ReminderAppointPage({super.key});
 
   @override
   _AppointPageState createState() => _AppointPageState();
 }
-class _AppointPageState extends State<AppointPage> {
+class _AppointPageState extends State<ReminderAppointPage> {
 
   bool? check3 = false;
 

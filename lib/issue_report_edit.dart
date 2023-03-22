@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'accounting_report/accounting_main.dart';
+
 class IssueeditPage extends StatefulWidget {
   const IssueeditPage({super.key});
 
@@ -321,7 +323,7 @@ class _IssueeditPageState extends State<IssueeditPage> {
                       ),
                       onPressed: () {
                         Route route = MaterialPageRoute(
-                            builder: (context) => const IssueeditPage());
+                            builder: (context) => const AccmainPage());
                         Navigator.push(context, route);
                       },
                       child: const Text("Save"))),
@@ -342,7 +344,7 @@ class _IssueeditPageState extends State<IssueeditPage> {
                       ),
                       onPressed: () {
                         Route route = MaterialPageRoute(
-                            builder: (context) => const IssueeditPage());
+                            builder: (context) => const AccmainPage());
                         Navigator.push(context, route);
                       },
                       child: const Text("Cancel"))),

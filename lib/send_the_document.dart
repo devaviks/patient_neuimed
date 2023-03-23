@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient_neuimed/send_the_document.dart';
 
-class UploadherePage extends StatefulWidget {
+import 'download_data.dart';
+
+class SenddocPage extends StatefulWidget {
   @override
-  _UploadherePageState createState() => _UploadherePageState();
+  _SenddocPageState createState() => _SenddocPageState();
 }
 
-class _UploadherePageState extends State<UploadherePage> {
+class _SenddocPageState extends State<SenddocPage> {
 
 
   @override
@@ -17,9 +18,9 @@ class _UploadherePageState extends State<UploadherePage> {
         backgroundColor: const Color(0xff0A345E),
         leading: IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.menu),
         ),
-        title: const Text("Upload Here"),
+        title: const Text("Send the Document"),
       ),
       body: SingleChildScrollView(
           child: Column(children: [
@@ -39,6 +40,25 @@ class _UploadherePageState extends State<UploadherePage> {
         ),
       ),
     ),
+            Padding(
+                padding:
+                EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
+                child:
+                Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Container(
+                    child: Text(
+                      "Send Document",
+                      style: GoogleFonts.josefinSans(
+                        textStyle: const TextStyle(
+                          color: Color(0xff212121),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          height: 1.5,
+                        ),
+                      ),
+                    ),
+                  ),
+                ])),
 
             Padding(
               padding: const EdgeInsets.only(left: 25, right: 25, top: 10),
@@ -49,12 +69,27 @@ class _UploadherePageState extends State<UploadherePage> {
                     const BorderSide(width: 1, color: Color(0xffE6E6E6)),
                     borderRadius: BorderRadius.circular(5.0),
                   ),
-                  labelText: 'Document Title',
-                  hintText: 'Enter Your Title',
+                  labelText: 'Select Sender',
                   contentPadding: const EdgeInsets.all(18),
                 ),
               ),
             ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide:
+                    const BorderSide(width: 1, color: Color(0xffE6E6E6)),
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  labelText: 'Select Document',
+                  contentPadding: const EdgeInsets.all(18),
+                ),
+              ),
+            ),
+
             Padding(
               padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
               child: TextField(
@@ -72,7 +107,8 @@ class _UploadherePageState extends State<UploadherePage> {
                 maxLines: 8,
               ),
             ),
-            SizedBox(height: 35),
+
+            const SizedBox(height: 35),
             Row(
               children: <Widget>[
                 const Padding(padding: EdgeInsets.only(right: 25)),
@@ -92,10 +128,10 @@ class _UploadherePageState extends State<UploadherePage> {
                         ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) => SenddocPage());
+                              builder: (context) => DownloaddataPage());
                           Navigator.push(context, route);
                         },
-                        child: const Text("Save document"))),
+                        child: const Text("Submit"))),
                 const Padding(padding: EdgeInsets.only(right: 20)),
                 SizedBox(
                     height: 40, //height of button
@@ -113,7 +149,7 @@ class _UploadherePageState extends State<UploadherePage> {
                         ),
                         onPressed: () {
                           Route route = MaterialPageRoute(
-                              builder: (context) =>  SenddocPage());
+                              builder: (context) =>  DownloaddataPage());
                           Navigator.push(context, route);
                         },
                         child: const Text("Cancel"))),
@@ -122,7 +158,6 @@ class _UploadherePageState extends State<UploadherePage> {
     ]
     )
       )
-
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'health_summary_details.dart';
+
 class HealthsumPage extends StatefulWidget {
   @override
   _HealthsumPageState createState() => _HealthsumPageState();
@@ -336,7 +338,7 @@ class _HealthsumPageState extends State<HealthsumPage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Route route =
-                MaterialPageRoute(builder: (context) => HealthsumPage());
+                MaterialPageRoute(builder: (context) => HealthdetailsPage());
             Navigator.push(context, route);
           },
           child: const Icon(Icons.arrow_circle_right_outlined),

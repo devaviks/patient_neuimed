@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/prescription_test_ordered.dart';
 
 class TestorderPage extends StatefulWidget {
+  const TestorderPage({super.key});
+
   @override
   _TestorderPageState createState() => _TestorderPageState();
 }
@@ -339,7 +342,7 @@ class _TestorderPageState extends State<TestorderPage> {
 
             Container(
                 margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
-                child: Wrap(spacing: 50, children: [
+                child: Wrap(spacing: 65, children: [
                   Text(
                     "Dr. Ziya deb",
                     style: GoogleFonts.josefinSans(
@@ -363,34 +366,28 @@ class _TestorderPageState extends State<TestorderPage> {
                       ),
                     ),
                   ),
-                   SizedBox(
-                    height:18, //height of button
-                    width:90, //width of button
-                    child:
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        side: const BorderSide(
-                          width: 1.0,
-                          color: Color(0xffC8C8C8),
-                        ),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0)),
-                        foregroundColor: Color(0xff767676), // change background color of button
-                        backgroundColor: Colors.white, // change text color of button
+                  Text(
+                    "13-02-2023\n"
+                        "04:15 PM",
+                    textAlign: TextAlign.right,
+                    style: GoogleFonts.josefinSans(
+                      textStyle: const TextStyle(
+                        color: Color(0xff0A345E),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        height: 1.5,
                       ),
-                      child: const Text('Prescrip...'),
-                      onPressed: () {},
                     ),
                   ),
+
                 ])),
           ],
         )
-
       ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Route route =
-            MaterialPageRoute(builder: (context) => TestorderPage());
+            MaterialPageRoute(builder: (context) => PrescriptestPage());
             Navigator.push(context, route);
           },
           child: const Icon(Icons.arrow_circle_right_outlined),

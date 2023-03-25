@@ -29,10 +29,11 @@ class _StartPageState extends State<StartPage> {
                     )),
                     Padding(
                       padding: EdgeInsets.only(
-                          top: MediaQuery.of(context).size.height * 0.05),
+                          top: MediaQuery.of(context).size.height * 0.05,
+                      ),
                       child: Container(
-                        width: 200,
-                        height: 200,
+                        width: 290,
+                        height: 290,
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
@@ -50,8 +51,8 @@ class _StartPageState extends State<StartPage> {
                         style: GoogleFonts.josefinSans(
                           textStyle: const TextStyle(
                             color: Color(0xff0A345E),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 20,
                           ),
                         ),
                       ),
@@ -62,8 +63,8 @@ class _StartPageState extends State<StartPage> {
                     Row(
                       children: <Widget>[
                         SizedBox(
-                            height: 50, //height of button
-                            width: 161,
+                            height: 45, //height of button
+                            width: MediaQuery.of(context).size.height * 0.19,
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   foregroundColor: Colors.white,
@@ -80,8 +81,8 @@ class _StartPageState extends State<StartPage> {
                                 child: const Text("Sign in"))),
                         const Padding(padding: EdgeInsets.only(right: 20)),
                         SizedBox(
-                            height: 50, //height of button
-                            width: 161,
+                            height: 45, //height of button
+                            width: MediaQuery.of(context).size.height * 0.19,
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   foregroundColor: Colors.white,
@@ -106,7 +107,7 @@ class _StartPageState extends State<StartPage> {
                           textStyle: const TextStyle(
                             color: Color(0xff0A345E),
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 14,
                           ),
                         ),
                       ),

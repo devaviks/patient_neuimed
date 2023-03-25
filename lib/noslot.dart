@@ -172,21 +172,34 @@ class _NoslotPageState extends State<NoslotPage> {
                   ),
                   Center(
                     child: Container(
-                      margin: EdgeInsets.only(top: 25),
+                      margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.09,),
 
-                    child: Text(" TODAY, 16 MAR \n"
-                    "No Slot Available",
+                    child: Text("Today, 16 Mar",
                       style: GoogleFonts.josefinSans(
                         textStyle:const TextStyle(
                             color: Color(0xff212121),
                             fontWeight: FontWeight.w700,
                             fontSize: 16,
-                            height: 5.2
                         ),
                       ),
-
                     ),
                     )
+                  ),
+
+                  Center(
+                      child: Container(
+                        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.065,),
+
+                        child: Text("No slot available",
+                          style: GoogleFonts.josefinSans(
+                            textStyle:const TextStyle(
+                              color: Color(0xffA0A2A4),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                      )
                   ),
 
                   Padding(padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),

@@ -152,9 +152,9 @@ class _AppointPageState extends State<ReminderAppointPage> {
             const Padding(padding: EdgeInsets.all(10)),
             Row(
                 children: <Widget>[
-                  const Padding(padding: EdgeInsets.all(19)),
+                  const Padding(padding: EdgeInsets.all(20)),
                   SizedBox(
-                      height: 25, //height of button
+                      height: 35, //height of button
                       width: 130,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(

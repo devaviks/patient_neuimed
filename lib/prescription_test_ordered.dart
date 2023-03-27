@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/test_result.dart';
+import 'package:patient_neuimed/widget/neuimed_text.dart';
 
 class PrescriptestPage extends StatefulWidget {
   const PrescriptestPage({super.key});
@@ -9,16 +11,12 @@ class PrescriptestPage extends StatefulWidget {
 }
 
 class _PrescriptestPageState extends State<PrescriptestPage> {
-
-
   String radioButtonItem = 'ONE';
   int id = 2;
 
   bool? check1 = false;
   bool? check2 = false;
   bool? check3 = false;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +71,7 @@ class _PrescriptestPageState extends State<PrescriptestPage> {
             padding: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.03),
             child: Text(
-              "All Test Ordered",
+              "Prescription wise Test Ordered",
               style: GoogleFonts.josefinSans(
                 textStyle: const TextStyle(
                   color: Color(0xff212121),
@@ -86,7 +84,7 @@ class _PrescriptestPageState extends State<PrescriptestPage> {
           ),
           Container(
               margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
-              child: Wrap(spacing: 65, children: [
+              child: Wrap(spacing: 63, children: [
                 Text(
                   "Dr. Ziya deb",
                   style: GoogleFonts.josefinSans(
@@ -111,19 +109,323 @@ class _PrescriptestPageState extends State<PrescriptestPage> {
                     ),
                   ),
                 ),
-              SizedBox(
-                  height:18, //height of button
-                  width:90, //width of button
-                  child:
-                ElevatedButton.icon(
-                  onPressed: (){
-                    print("You pressed Icon Elevated Button");
-                  },
-                  icon: Icon(Icons.file_copy),  //icon data for elevated button
-                  label: Text("Elevated Button with Icon"),
-                  //label text
-                )
-              )])),
-        ])));
+                SizedBox(
+                    height: 15, //height of button
+                    width: 88, //width of button
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.file_copy,
+                        size: 10,
+                        color: Color(0xffDD2C00),
+                      ), //icon data for elevated button
+                      label: NeuiText(
+                        text: "Prescrip...",
+                        size: 9,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Color(0xffC8C8C8),
+                        ),
+                        foregroundColor: const Color(0xff767676),
+                        // change background color of button
+                        backgroundColor: Colors.white,
+                      ),
+                      //label text
+                    ))
+              ])),
+          Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
+              child: Wrap(spacing: 64, children: [
+                Text(
+                  "Dr. Ziya deb",
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff219FFF),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                Text(
+                  "13-02-2023\n"
+                  "04:15 PM",
+                  textAlign: TextAlign.right,
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff0A345E),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                    height: 15, //height of button
+                    width: 88, //width of button
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.file_copy,
+                        size: 10,
+                        color: Color(0xffDD2C00),
+                      ), //icon data for elevated button
+                      label: NeuiText(
+                        text: "Prescrip...",
+                        size: 9,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Color(0xffC8C8C8),
+                        ),
+                        foregroundColor: const Color(0xff767676),
+                        // change background color of button
+                        backgroundColor: Colors.white,
+                      ),
+                      //label text
+                    ))
+              ])),
+          Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
+              child: Wrap(spacing: 64, children: [
+                Text(
+                  "Dr. Ziya deb",
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff219FFF),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                Text(
+                  "13-02-2023\n"
+                  "04:15 PM",
+                  textAlign: TextAlign.right,
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff0A345E),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                    height: 15, //height of button
+                    width: 88, //width of button
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.file_copy,
+                        size: 10,
+                        color: Color(0xffDD2C00),
+                      ), //icon data for elevated button
+                      label: NeuiText(
+                        text: "Prescrip...",
+                        size: 9,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Color(0xffC8C8C8),
+                        ),
+                        foregroundColor: const Color(0xff767676),
+                        // change background color of button
+                        backgroundColor: Colors.white,
+                      ),
+                      //label text
+                    ))
+              ])),
+          Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
+              child: Wrap(spacing: 64, children: [
+                Text(
+                  "Dr. Ziya deb",
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff219FFF),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                Text(
+                  "13-02-2023\n"
+                  "04:15 PM",
+                  textAlign: TextAlign.right,
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff0A345E),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                    height: 15, //height of button
+                    width: 88, //width of button
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.file_copy,
+                        size: 10,
+                        color: Color(0xffDD2C00),
+                      ), //icon data for elevated button
+                      label: NeuiText(
+                        text: "Prescrip...",
+                        size: 9,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Color(0xffC8C8C8),
+                        ),
+                        foregroundColor: const Color(0xff767676),
+                        // change background color of button
+                        backgroundColor: Colors.white,
+                      ),
+                      //label text
+                    ))
+              ])),
+          Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
+              child: Wrap(spacing: 64, children: [
+                Text(
+                  "Dr. Ziya deb",
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff219FFF),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                Text(
+                  "13-02-2023\n"
+                  "04:15 PM",
+                  textAlign: TextAlign.right,
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff0A345E),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                    height: 15, //height of button
+                    width: 88, //width of button
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.file_copy,
+                        size: 10,
+                        color: Color(0xffDD2C00),
+                      ), //icon data for elevated button
+                      label: NeuiText(
+                        text: "Prescrip...",
+                        size: 9,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Color(0xffC8C8C8),
+                        ),
+                        foregroundColor: const Color(0xff767676),
+                        // change background color of button
+                        backgroundColor: Colors.white,
+                      ),
+                      //label text
+                    ))
+              ])),
+          Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 15),
+              child: Wrap(spacing: 64, children: [
+                Text(
+                  "Dr. Ziya deb",
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff219FFF),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                Text(
+                  "13-02-2023\n"
+                  "04:15 PM",
+                  textAlign: TextAlign.right,
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                      color: Color(0xff0A345E),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                    height: 15, //height of button
+                    width: 88, //width of button
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.file_copy,
+                        size: 10,
+                        color: Color(0xffDD2C00),
+                      ), //icon data for elevated button
+                      label: NeuiText(
+                        text: "Prescrip...",
+                        size: 9,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Color(0xffC8C8C8),
+                        ),
+                        foregroundColor: const Color(0xff767676),
+                        // change background color of button
+                        backgroundColor: Colors.white,
+                      ),
+                      //label text
+                    ))
+              ])),
+        ])),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Route route =
+                MaterialPageRoute(builder: (context) => TestresultPage());
+            Navigator.push(context, route);
+          },
+          child: const Icon(Icons.arrow_circle_right_outlined),
+        ));
   }
 }

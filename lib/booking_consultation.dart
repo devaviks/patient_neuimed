@@ -308,7 +308,7 @@ class _BookconPageState extends State<BookconPage> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                     ),
-                    child: SizedBox(//height of button
+                    child: SizedBox(
                       width:352, //width of button
                       child:
                       ElevatedButton(

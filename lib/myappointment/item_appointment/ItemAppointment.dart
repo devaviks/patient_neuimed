@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../list_of_bills/list_bills.dart';
+import '../../consultation_details.dart';
 
 class RowAppointPage extends StatefulWidget {
   const RowAppointPage({super.key});
@@ -134,7 +134,7 @@ class _RowAppointPageState extends State<RowAppointPage> {
                                   onPressed: () {
                                     Route route = MaterialPageRoute(
                                         builder: (context) =>
-                                        const ListbillPage());
+                                        const ConsultationdetailsPage());
                                     Navigator.push(context, route);
                                   },
                                 )))

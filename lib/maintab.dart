@@ -6,6 +6,7 @@ import 'package:patient_neuimed/profile/personal_container.dart';
 import 'dart:developer';
 
 import 'add_medical_history.dart';
+import 'calendardob.dart';
 
 
 
@@ -53,12 +54,12 @@ class TabBarDemo extends StatelessWidget {
                   msg: "Index",
                   toastLength: Toast.LENGTH_SHORT,
                   gravity: ToastGravity.CENTER,
-                  backgroundColor: Colors.red,
+                  backgroundColor: Color(0xff0A345E),
                   textColor: Colors.white,
                   fontSize: 16.0
               );
                 Route route = MaterialPageRoute(
-                    builder: (context) => const AddhistoryPage());
+                    builder: (context) => CalenderPage());
                 Navigator.push(context, route);
               },
             child: const Icon(Icons.arrow_right_sharp),

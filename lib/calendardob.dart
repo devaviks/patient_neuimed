@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'add_medical_history.dart';
+
+
 
 void main() {
   runApp(CalenderPage());
 }
 
 class CalenderPage extends StatelessWidget {
+
+  
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +23,7 @@ class CalenderPage extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() {
     return _HomePage();
@@ -27,6 +32,32 @@ class HomePage extends StatefulWidget {
 
 class _HomePage extends State<HomePage> {
   TextEditingController dateInput = TextEditingController();
+
+  String dropdownvalue = 'Male';
+  String bloodgroupvalue = 'B+';
+  String maritalvalue = 'Married';
+
+  // List of items in our dropdown menu
+  var gender = [
+  'Male',
+  'Female',
+  'Others',
+  ];
+
+  var bloodgroup = [
+    'B+',
+    'B-',
+    'O+',
+    'O-',
+    'A+',
+    'A-',
+  ];
+
+  var marital = [
+    'Married',
+    'Single',
+    'Divorced',
+  ];
 
   @override
   void initState() {
@@ -38,11 +69,17 @@ class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Date of Birth"),
+            leading: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.arrow_back),
+            ),
+          title: Text("Profile Information"),
           backgroundColor: Color(0xff0A345E) //background color of app bar
         ),
-        body: Container(
-            padding: EdgeInsets.all(20),
+        body: Column(
+    children: [
+      Container(
+            padding: EdgeInsets.only(left: 20, right: 20, top: 20),
             height: MediaQuery
                 .of(context)
                 .size
@@ -80,9 +117,99 @@ class _HomePage extends State<HomePage> {
                       });
                     } else {}
                   },
-
-
                 ))),
+
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 58, right: 20),
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
+            height: 60,
+            //icon of text field
+            child: DropdownButton(
+              isExpanded: true,
+              value: dropdownvalue,
+              items: gender.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(items),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownvalue = newValue!;
+                });
+              },
+            ),
+          )
+        ],
+      ),
+
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 58, right: 20),
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
+            height: 60,
+            //icon of text field
+            child: DropdownButton(
+              isExpanded: true,
+              value: bloodgroupvalue,
+              items: bloodgroup.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(items),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  bloodgroupvalue = newValue!;
+                });
+              },
+            ),
+          )
+        ],
+      ),
+
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 58, right: 20),
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
+            height: 60,
+            //icon of text field
+            child: DropdownButton(
+              isExpanded: true,
+              value: maritalvalue,
+              items: marital.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(items),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  maritalvalue = newValue!;
+                });
+              },
+            ),
+          )
+        ],
+      ),
+    ]
+        ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -93,7 +220,8 @@ class _HomePage extends State<HomePage> {
         child: const Icon(Icons.arrow_right_sharp),
 
       ),
-
     );
   }
 }
+
+

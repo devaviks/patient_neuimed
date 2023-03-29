@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient_neuimed/specialization.dart';
+import 'package:patient_neuimed/slots.dart';
 import 'package:patient_neuimed/widget/neuimed_text.dart';
 
 class DoctorfoundPage extends StatefulWidget {
@@ -162,7 +162,7 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                                  onPressed: () {
                                    Route route = MaterialPageRoute(
                                        builder: (context) =>
-                                       const DoctorfoundPage());
+                                       const SlotPage());
                                    Navigator.push(context, route);
                                  },
                                  child: NeuiText(text: "Book Appointment (5)", size: 14, fontWeight :FontWeight.w500, ))),
@@ -181,7 +181,7 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Route route = MaterialPageRoute(
-                builder: (context) => const SpecializationPage());
+                builder: (context) => const SlotPage());
             Navigator.push(context, route);
           },
           child: const Icon(Icons.arrow_circle_right_outlined),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient_neuimed/search_page.dart';
+
+import 'home_page.dart';
 
 
 
@@ -127,7 +128,7 @@ class _ChangepassPageState extends State<ChangepassPage> {
                                     onPressed: () {
                                       Route route = MaterialPageRoute(
                                           builder: (context) =>
-                                          const SearchPage());
+                                          const MainhomePage());
                                       Navigator.push(context, route);
                                     },
                                     child: const Text("Save"))),
@@ -149,7 +150,7 @@ class _ChangepassPageState extends State<ChangepassPage> {
                                     onPressed: () {
                                       Route route = MaterialPageRoute(
                                           builder: (context) =>
-                                          const SearchPage());
+                                          const MainhomePage());
                                       Navigator.push(context, route);
                                     },
                                     child: const Text("Cancel"))),

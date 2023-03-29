@@ -11,14 +11,14 @@ class _MessagingPageState extends State<MessagingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff0A345E),
           leading: IconButton(
             onPressed: () {},
             icon: const Icon(Icons.menu),
           ),
-          title: Text("Primary",
+          title: const Text("Primary",
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.0,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:patient_neuimed/upload_docs.dart';
 
+import 'compose.dart';
+
 class MessagingPage extends StatefulWidget {
 
   @override
@@ -29,7 +31,7 @@ class _MessagingPageState extends State<MessagingPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Route route = MaterialPageRoute(
-              builder: (context) => UploaddocPage());
+              builder: (context) => ComposePage());
           Navigator.push(context, route);
         },
         child: Icon(Icons.edit),

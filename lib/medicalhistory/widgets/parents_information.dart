@@ -32,7 +32,7 @@ class _ParentsInfoState extends State<ParentsInfo> {
             ),
             ),
               Container(
-              height: MediaQuery.of(context).size.height * .34,
+              height: MediaQuery.of(context).size.height * .32,
               width: MediaQuery.of(context).size.height * .40,
               decoration: BoxDecoration(
               color: Colors.white,
@@ -65,7 +65,7 @@ class _ParentsInfoState extends State<ParentsInfo> {
                                   color: Color(0xff707683),
                                   fontWeight: FontWeight.w700,
                                   fontSize: 12,
-                                  height: 3.0,
+                                  height: 2.5,
                                 ),
                               ),
                             ),
@@ -82,8 +82,8 @@ class _ParentsInfoState extends State<ParentsInfo> {
                                 textStyle:const TextStyle(
                                     color: Color(0xff707683),
                                     fontWeight: FontWeight.w400,
-                                    fontSize: 12,
-                                    height: 3.5
+                                    fontSize: 10,
+                                    height: 3.0
                                 ),
                               ),
                             ),

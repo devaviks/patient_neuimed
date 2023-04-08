@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'download_data.dart';
+import 'myappointment/item_appointment/drawer.dart';
 
 class SenddocPage extends StatefulWidget {
   @override
@@ -9,19 +10,26 @@ class SenddocPage extends StatefulWidget {
 }
 
 class _SenddocPageState extends State<SenddocPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
+  TextEditingController descriptionController = TextEditingController();
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: AppBar(
         backgroundColor: const Color(0xff0A345E),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            _key.currentState!.openDrawer();
+          },
           icon: const Icon(Icons.menu),
         ),
         title: const Text("Send the Document"),
       ),
+        drawer: DrawerPage(),
       body: SingleChildScrollView(
           child: Column(children: [
           Container(
@@ -103,6 +111,7 @@ class _SenddocPageState extends State<SenddocPage> {
                   labelText: 'Description',
                   contentPadding: const EdgeInsets.all(18),
                 ),
+                controller: descriptionController,
                 style: TextStyle(fontSize: 16),
                 maxLines: 8,
               ),
@@ -127,6 +136,7 @@ class _SenddocPageState extends State<SenddocPage> {
                           Colors.white, // change text color of button
                         ),
                         onPressed: () {
+                          print(descriptionController);
                           Route route = MaterialPageRoute(
                               builder: (context) => DownloaddataPage());
                           Navigator.push(context, route);
@@ -148,6 +158,7 @@ class _SenddocPageState extends State<SenddocPage> {
                           Colors.white, // change text color of button
                         ),
                         onPressed: () {
+                          print(descriptionController);
                           Route route = MaterialPageRoute(
                               builder: (context) =>  DownloaddataPage());
                           Navigator.push(context, route);

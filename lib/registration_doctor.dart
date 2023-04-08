@@ -17,7 +17,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Registration"),

@@ -16,7 +16,9 @@ class _IssuereportappPageState extends State<IssuereportappPage> {
       appBar: AppBar(
         backgroundColor: const Color(0xff0A345E),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back),
         ),
         title: const Text("Issue Report for Appointment"),

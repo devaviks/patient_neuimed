@@ -16,10 +16,12 @@ class _BookconPageState extends State<BookconPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
-          title: Text("Book Consultation "),
+          title: Text("Book Consultation"),
           backgroundColor: Color(0xff0A345E),
         ),
         body: SingleChildScrollView(

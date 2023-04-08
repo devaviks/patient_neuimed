@@ -17,7 +17,9 @@ class _ComposePageState extends State<ComposePage> {
         appBar: AppBar(
           backgroundColor: Color(0xff0A345E),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: const Text("Compose",

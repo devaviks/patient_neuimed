@@ -16,7 +16,9 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Doctors Found"),
@@ -84,8 +86,8 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                          Row(
                            children: [
                              Container(
-                               margin: const EdgeInsets.only(left: 10, right: 10, top: 5),
-                               child: Wrap(spacing: 95, children: [
+                               margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
+                               child: Wrap(spacing: 110, children: [
                                  Text(
                                  "Available Consult Slots ( 12 )",
                                    textAlign: TextAlign.left,
@@ -93,7 +95,7 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                                    textStyle: const TextStyle(
                                      color: Color(0xff212121),
                                      fontWeight: FontWeight.w600,
-                                     fontSize: 14,
+                                     fontSize: 12,
                                      height: 1.5,
                                    ),
                                  ),
@@ -105,7 +107,7 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                                      textStyle: const TextStyle(
                                        color: Color(0xffDD2C00),
                                        fontWeight: FontWeight.w600,
-                                       fontSize: 14,
+                                       fontSize: 12,
                                        height: 1.5,
                                      ),
                                    ),
@@ -117,8 +119,8 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                          Row(
                            children: [
                              Container(
-                                 margin: const EdgeInsets.only(left: 10, right: 10, top: 5),
-                                 child: Wrap(spacing: 110, children: [
+                                 margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
+                                 child: Wrap(spacing: 152, children: [
                                    Text(
                                      "🎥 Video Consult",
                                      textAlign: TextAlign.left,
@@ -126,7 +128,7 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                                        textStyle: const TextStyle(
                                          color: Color(0xff13CF62),
                                          fontWeight: FontWeight.w600,
-                                         fontSize: 14,
+                                         fontSize: 10,
                                          height: 1.5,
                                        ),
                                      ),
@@ -138,7 +140,7 @@ class _DoctorfoundPageState extends State<DoctorfoundPage> {
                                        textStyle: const TextStyle(
                                          color: Color(0xff707683),
                                          fontWeight: FontWeight.w400,
-                                         fontSize: 14,
+                                         fontSize: 10,
                                          height: 1.5,
                                        ),
                                      ),

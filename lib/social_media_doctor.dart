@@ -17,7 +17,9 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Social Media Sites"),

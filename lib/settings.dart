@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/myappointment/item_appointment/drawer.dart';
 
 import 'messaging.dart';
 
@@ -11,20 +12,25 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   bool? check3 = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
           title: Text("Settings"),
           backgroundColor: Color(0xff0A345E),
         ),
+        drawer: DrawerPage(),
         body: SingleChildScrollView(
             child: Column(children: [
           Container(

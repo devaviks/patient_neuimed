@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/myappointment/item_appointment/drawer.dart';
 
 import 'issue_report_appoint.dart';
 
@@ -9,18 +10,23 @@ class RequestrecordPage extends StatefulWidget {
 }
 
 class _RequestrecordPageState extends State<RequestrecordPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: AppBar(
         backgroundColor: const Color(0xff0A345E),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            _key.currentState!.openDrawer();
+          },
           icon: const Icon(Icons.menu),
         ),
-        title: const Text("Download Data"),
+        title: const Text("Requested Records"),
       ),
+      drawer: DrawerPage(),
       body: SingleChildScrollView(
     child: Column(children: [
       Container(

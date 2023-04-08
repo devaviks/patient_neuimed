@@ -47,7 +47,7 @@ class _DiseaseInfoState extends State<DiseaseInfo> {
               ],
               ),
                 child: Container(
-                    margin: EdgeInsets.only(left: 15),
+                    margin: EdgeInsets.all(20),
                     child: Row(
                         children: [
                           Container(
@@ -59,14 +59,12 @@ class _DiseaseInfoState extends State<DiseaseInfo> {
                                   color: Color(0xff707683),
                                   fontWeight: FontWeight.w700,
                                   fontSize: 12,
-                                  height: 3.7,
                                 ),
                               ),
                             ),
                           ),
                           Spacer(),
                           Container(
-                            margin: EdgeInsets.only(right: 15),
                             alignment: Alignment.topRight,
                             child: Text(
                               "Blood sugar, Blood Pressure",
@@ -76,7 +74,6 @@ class _DiseaseInfoState extends State<DiseaseInfo> {
                                     color: Color(0xff707683),
                                     fontWeight: FontWeight.w400,
                                     fontSize: 12,
-                                    height: 3.7
                                 ),
                               ),
                             ),

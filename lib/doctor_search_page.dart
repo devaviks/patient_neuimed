@@ -24,7 +24,9 @@ class _FinddocPageState extends State<FinddocPage> {
         key: _key,
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           actions: <Widget>[

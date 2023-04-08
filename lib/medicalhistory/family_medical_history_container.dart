@@ -3,6 +3,7 @@ import 'package:patient_neuimed/medicalhistory/widgets/disease_information.dart'
 import 'package:patient_neuimed/medicalhistory/widgets/parents_information.dart';
 
 import '../dependants.dart';
+import '../myappointment/item_appointment/drawer.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({super.key});
@@ -12,17 +13,24 @@ class HistoryPage extends StatefulWidget {
 }
 
 class _HistoryPageState extends State<HistoryPage> {
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
           title: Text("Family Medical History"),
           backgroundColor: Color(0xff0A345E),
         ),
+      drawer: DrawerPage(),
         body: Column(
       children: [
         DiseaseInfo(),

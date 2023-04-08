@@ -57,7 +57,7 @@ class _LifestyleInfoState extends State<LifestyleInfo> {
                               color: Color(0xff707683),
                               fontWeight: FontWeight.w700,
                               fontSize: 12,
-                              height: 3.7,
+                              height: 3.3,
                             ),
                           ),
                         ),
@@ -78,7 +78,7 @@ class _LifestyleInfoState extends State<LifestyleInfo> {
                                 color: Color(0xff212121),
                                 fontWeight: FontWeight.w400,
                                 fontSize: 12,
-                                height: 3.7
+                                height: 3.3
                             ),
                           ),
                         ),

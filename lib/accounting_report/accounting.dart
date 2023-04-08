@@ -13,7 +13,8 @@ class AccountingPage extends StatefulWidget {
 class _AccountingPageState extends State<AccountingPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SingleChildScrollView(
+    return Scaffold(
+      body: SingleChildScrollView(
         child: Column(
             children: [
               Container(

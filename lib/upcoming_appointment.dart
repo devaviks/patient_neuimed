@@ -17,10 +17,12 @@ class _UpcomappPageState extends State<UpcomappPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back),
         ),
-        title: Text("Upcoming Appointment "),
+        title: Text("Upcoming Appointment"),
         backgroundColor: Color(0xff0A345E),
       ),
       body: SingleChildScrollView(

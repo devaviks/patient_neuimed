@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/myappointment/item_appointment/drawer.dart';
 
 import 'health_summary_details.dart';
 
@@ -9,17 +10,24 @@ class HealthsumPage extends StatefulWidget {
 }
 
 class _HealthsumPageState extends State<HealthsumPage> {
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           backgroundColor: const Color(0xff0A345E),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
           title: const Text("Health Summary"),
         ),
+        drawer: DrawerPage(),
         body: SingleChildScrollView(
             child: Column(children: [
           Container(

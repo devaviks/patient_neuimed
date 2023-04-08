@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient_neuimed/forgot.dart';
 
+import '../widget/neuimed_text.dart';
+
 class nextpage extends StatefulWidget {
   const nextpage({super.key});
 
@@ -11,7 +13,7 @@ class nextpage extends StatefulWidget {
 
 class _nextpageState extends State<nextpage> {
 
-  TextEditingController nameController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
 
@@ -32,21 +34,17 @@ class _nextpageState extends State<nextpage> {
                     ),
                   ),
                 ),
-                Center(
-                  child: Text(
+                const Center(
+                  child: NeuiText(text:
                     "Sign In to Neuimed Healthcare",
-                    style: GoogleFonts.josefinSans(
-                      textStyle: const TextStyle(
                         color: Color(0xff164276),
                         fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                        size: 22,
                       ),
                     ),
-                  ),
-                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
-                  child: TextField(
+                  child: TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: const BorderSide(
@@ -54,15 +52,15 @@ class _nextpageState extends State<nextpage> {
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                       labelText: 'User Name',
-                      hintText: 'Enter Your Name',
+                      hintText: 'Enter Your Username',
                       contentPadding: const EdgeInsets.all(18),
                     ),
-                    controller: nameController,
+                    controller: usernameController,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(25),
-                  child: TextField(
+                  child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -87,10 +85,13 @@ class _nextpageState extends State<nextpage> {
                           0xff0A345E), // change text color of button
                     ),
                     child: const Text('Login'),
-                    onPressed: (){
-                      print(nameController.text);
-                      print(passwordController.text);
-                    },
+                    onPressed: () {
+                      print(usernameController);
+                      print(passwordController);
+                      Route route = MaterialPageRoute(
+                          builder: (context) => const ForgotPage());
+                      Navigator.push(context, route);
+                    }
                   ),
                 ),
                 Container(

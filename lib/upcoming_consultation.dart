@@ -16,7 +16,9 @@ class _UpcomconPageState extends State<UpcomconPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Upcoming Consultation "),

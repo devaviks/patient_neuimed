@@ -11,12 +11,20 @@ class IssueeditPage extends StatefulWidget {
 }
 
 class _IssueeditPageState extends State<IssueeditPage> {
+
+  TextEditingController appointmentController = TextEditingController();
+  TextEditingController subjectController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Issue Report"),
@@ -269,6 +277,7 @@ class _IssueeditPageState extends State<IssueeditPage> {
                 hintText: 'Enter Your Appointment',
                 contentPadding: const EdgeInsets.all(18),
               ),
+              controller: appointmentController,
             ),
           ),
           Padding(
@@ -284,6 +293,7 @@ class _IssueeditPageState extends State<IssueeditPage> {
                 hintText: 'Enter Your Subject',
                 contentPadding: const EdgeInsets.all(18),
               ),
+              controller: subjectController,
             ),
           ),
           Padding(
@@ -299,6 +309,7 @@ class _IssueeditPageState extends State<IssueeditPage> {
                 labelText: 'Description',
                 contentPadding: const EdgeInsets.all(18),
               ),
+              controller: descriptionController,
               style: TextStyle(fontSize: 16),
               maxLines: 8,
             ),
@@ -322,6 +333,9 @@ class _IssueeditPageState extends State<IssueeditPage> {
                             Colors.white, // change text color of button
                       ),
                       onPressed: () {
+                        print(appointmentController);
+                        print(subjectController);
+                        print(descriptionController);
                         Route route = MaterialPageRoute(
                             builder: (context) => const AccmainPage());
                         Navigator.push(context, route);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patient_neuimed/myappointment/item_appointment/drawer.dart';
 
 import 'issue_report_edit.dart';
 
@@ -11,17 +12,23 @@ class IssuePage extends StatefulWidget {
 }
 
 class _IssuePageState extends State<IssuePage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
           title: Text("Issue Report"),
           backgroundColor: Color(0xff0A345E),
         ),
+        drawer: DrawerPage(),
         body: SingleChildScrollView(
             child: Column(children: [
           Padding(

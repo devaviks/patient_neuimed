@@ -14,7 +14,9 @@ class _VisitdetailsPageState extends State<VisitdetailsPage> {
         appBar: AppBar(
           backgroundColor: const Color(0xff0A345E),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: const Text("Visit Summary Details"),

@@ -58,7 +58,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                               color: Color(0xff707683),
                               fontWeight: FontWeight.w700,
                               fontSize: 12,
-                              height: 3.7,
+                              height: 3.2,
                             ),
                           ),
                         ),
@@ -80,7 +80,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                               color: Color(0xff707683),
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
-                                height: 3.7
+                                height: 3.2
                             ),
                           ),
                         ),

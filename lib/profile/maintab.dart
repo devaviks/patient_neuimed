@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:patient_neuimed/myappointment/item_appointment/drawer.dart';
 import 'package:patient_neuimed/profile/lifestyle_container.dart';
 import 'package:patient_neuimed/profile/medical_container.dart';
 import 'package:patient_neuimed/profile/personal_container.dart';
 import 'dart:developer';
 
-import 'add_medical_history.dart';
-import 'calendardob.dart';
+import '../calendardob.dart';
 
 
 
 
 class TabBarDemo extends StatelessWidget {
-  const TabBarDemo({super.key});
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class TabBarDemo extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
+          key: _key,
           appBar: AppBar(
             bottom: TabBar(
               onTap: (index) {
@@ -33,14 +35,17 @@ class TabBarDemo extends StatelessWidget {
               ],
             ),
             leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                _key.currentState!.openDrawer();
+              },
               icon: const Icon(Icons.menu),
             ),
 
             title: const Text('Profile'),
             backgroundColor: Color(0xff0A345E),
             ),
-          body: const TabBarView(
+          drawer: DrawerPage(),
+          body: TabBarView(
             children: <Widget>[
               PersonalPage(),
               MedicalPage(),

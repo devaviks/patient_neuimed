@@ -65,8 +65,7 @@ class _PersonalAddressState extends State<PersonalAddress> {
                               textStyle:const TextStyle(
                                 color: Color(0xff707683),
                                 fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                letterSpacing: 0.5,
+                                fontSize: 11,
                               ),
                             ),
 

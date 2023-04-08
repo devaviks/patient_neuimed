@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:patient_neuimed/upload_docs.dart';
 
 import 'compose.dart';
+import 'myappointment/item_appointment/drawer.dart';
 
 class MessagingPage extends StatefulWidget {
 
@@ -10,17 +11,21 @@ class MessagingPage extends StatefulWidget {
 }
 
 class _MessagingPageState extends State<MessagingPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           backgroundColor: Color(0xff0A345E),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
-          title: const Text("Primary",
+          title: const Text("Inbox",
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.0,
@@ -28,6 +33,7 @@ class _MessagingPageState extends State<MessagingPage> {
             ),
           ),
         ),
+      drawer: DrawerPage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Route route = MaterialPageRoute(

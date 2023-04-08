@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:patient_neuimed/startscreenone.dart';
+import 'package:patient_neuimed/start_screen/start_screen_main.dart';
+
 
 
 void main() => runApp(const MaterialApp(debugShowCheckedModeBanner: false,home:SplashPage()));
@@ -28,7 +29,7 @@ class _SplashPageState extends State<SplashPage> {
 
   void navigationToNextPage() async {
     Navigator.pushAndRemoveUntil(
-      context, MaterialPageRoute(builder: (context) => StartPage()),
+      context, MaterialPageRoute(builder: (context) => StartmainPage()),
           (Route<dynamic> route) => false,//
     );
   }
@@ -47,3 +48,7 @@ class _SplashPageState extends State<SplashPage> {
     );
   }
 }
+
+
+
+

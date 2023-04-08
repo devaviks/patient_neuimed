@@ -3,17 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'appointment_reminders.dart';
 
-
-
-
 class AdddependentPage extends StatefulWidget {
   const AdddependentPage({super.key});
 
   @override
   _AdddependentPageState createState() => _AdddependentPageState();
 }
-class _AdddependentPageState extends State<AdddependentPage> {
 
+class _AdddependentPageState extends State<AdddependentPage> {
   String radioButtonItem = 'ONE';
   int id = 1;
 
@@ -21,40 +18,50 @@ class _AdddependentPageState extends State<AdddependentPage> {
   bool? check2 = false;
   bool? check3 = false;
 
+  TextEditingController firstnameController = TextEditingController();
+  TextEditingController lastnameController = TextEditingController();
+  TextEditingController dateofbirthController = TextEditingController();
+  TextEditingController relationshipController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back),
+          ),
+          title: Text("Add Dependent's History"),
+          backgroundColor: Color(0xff0A345E),
         ),
-        title: Text("Add Dependent's History"),
-        backgroundColor: Color(0xff0A345E),
-      ),
         body: SingleChildScrollView(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-                  Container(
-                      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03,
-                      left: MediaQuery.of(context).size.height * 0.03,
-                      right: MediaQuery.of(context).size.height * 0.03,
-                      bottom: MediaQuery.of(context).size.height * 0.01,
-                      ),
-                      alignment: Alignment.topLeft,
-                  child: Text("The following conditions must be meet to receive access to your child's record:",
-                      style: GoogleFonts.josefinSans(
-                      textStyle:const TextStyle(
-                      color: Color(0xff0A345E),
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      height: 1.2
-                      ),
-                    ),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.03,
+                  left: MediaQuery.of(context).size.height * 0.03,
+                  right: MediaQuery.of(context).size.height * 0.03,
+                  bottom: MediaQuery.of(context).size.height * 0.01,
+                ),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "The following conditions must be meet to receive access to your child's record:",
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                        color: Color(0xff0A345E),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                        height: 1.2),
                   ),
                 ),
-              CheckboxListTile( //checkbox positioned at left
+              ),
+              CheckboxListTile(
+                //checkbox positioned at left
                 value: check3,
                 controlAffinity: ListTileControlAffinity.leading,
                 onChanged: (bool? value) {
@@ -62,7 +69,8 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     check3 = value;
                   });
                 },
-                title: Text("You are the parent.",
+                title: Text(
+                  "You are the parent.",
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
                       color: Color(0xff707683),
@@ -72,8 +80,8 @@ class _AdddependentPageState extends State<AdddependentPage> {
                   ),
                 ),
               ),
-
-              CheckboxListTile( //checkbox positioned at left
+              CheckboxListTile(
+                //checkbox positioned at left
                 value: check2,
                 controlAffinity: ListTileControlAffinity.leading,
                 onChanged: (bool? value) {
@@ -81,7 +89,8 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     check2 = value;
                   });
                 },
-                title: Text("Your child is less than 18 years of age.",
+                title: Text(
+                  "Your child is less than 18 years of age.",
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
                       color: Color(0xff707683),
@@ -91,8 +100,8 @@ class _AdddependentPageState extends State<AdddependentPage> {
                   ),
                 ),
               ),
-
-              CheckboxListTile( //checkbox positioned at left
+              CheckboxListTile(
+                //checkbox positioned at left
                 value: check1,
                 controlAffinity: ListTileControlAffinity.leading,
                 onChanged: (bool? value) {
@@ -100,8 +109,9 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     check1 = value;
                   });
                 },
-                title: Text("You have the legal authority to access information"
-                    " and make medical decisions on behalf of your child.",
+                title: Text(
+                  "You have the legal authority to access information"
+                  " and make medical decisions on behalf of your child.",
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
                       color: Color(0xff707683),
@@ -123,10 +133,11 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     hintText: 'Enter your First Name',
                     contentPadding: const EdgeInsets.all(18),
                   ),
+                  controller: firstnameController,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 25, right: 25,bottom: 25),
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -137,10 +148,11 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     hintText: 'Enter your Last Name',
                     contentPadding: const EdgeInsets.all(18),
                   ),
+                  controller: lastnameController,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 25, right: 25,bottom: 25),
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -151,81 +163,78 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     hintText: 'Enter your Date of Birth',
                     contentPadding: const EdgeInsets.all(18),
                   ),
+                  controller: dateofbirthController,
                 ),
               ),
-
               Column(
                 children: [
-              Padding(
-              padding: EdgeInsets.only(left: MediaQuery.of(context).size.height * 0.035,
-              bottom: MediaQuery.of(context).size.height * 0.03,
-              ),
-              child: Row(
-              children: <Widget>[
-              Container(
-              alignment: Alignment.center,
-              child: Text("Gender :",
-                style: GoogleFonts.josefinSans(
-                  textStyle: const TextStyle(
-                    color: Color(0xff707683),
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                  ),
-                ),
-              ),
-              ),
-                         Radio(
-                      value: 1,
-                      groupValue: id,
-                      onChanged: (val) {
-                      setState(() {
-                      radioButtonItem = 'Male';
-                      id = 1;
-                      });
-                      },
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.035,
+                      bottom: MediaQuery.of(context).size.height * 0.03,
+                    ),
+                    child: Row(children: <Widget>[
+                      Container(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Gender :",
+                          style: GoogleFonts.josefinSans(
+                            textStyle: const TextStyle(
+                              color: Color(0xff707683),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
                       ),
-                       Text(
-                      'Male',
-                      style: new TextStyle(fontSize: 15),
-                      ),
-
-
                       Radio(
-                      value: 2,
-                      groupValue: id,
-                      onChanged: (val) {
-                      setState(() {
-                      radioButtonItem = 'Female';
-                      id = 2;
-                      });
-                      },
+                        value: 1,
+                        groupValue: id,
+                        onChanged: (val) {
+                          setState(() {
+                            radioButtonItem = 'Male';
+                            id = 1;
+                          });
+                        },
                       ),
                       Text(
-                      'Female',
-                      style: new TextStyle(fontSize: 15),
+                        'Male',
+                        style: new TextStyle(fontSize: 15),
                       ),
-
                       Radio(
-                      value: 3,
-                      groupValue: id,
-                      onChanged: (val) {
-                      setState(() {
-                      radioButtonItem = 'Others';
-                      id = 3;
-                      });
-                      },
+                        value: 2,
+                        groupValue: id,
+                        onChanged: (val) {
+                          setState(() {
+                            radioButtonItem = 'Female';
+                            id = 2;
+                          });
+                        },
                       ),
                       Text(
-                      'Others',
-                      style: new TextStyle(fontSize: 15),
+                        'Female',
+                        style: new TextStyle(fontSize: 15),
                       ),
-                                  ]
-                              ),
-              )
+                      Radio(
+                        value: 3,
+                        groupValue: id,
+                        onChanged: (val) {
+                          setState(() {
+                            radioButtonItem = 'Others';
+                            id = 3;
+                          });
+                        },
+                      ),
+                      Text(
+                        'Others',
+                        style: new TextStyle(fontSize: 15),
+                      ),
+                    ]),
+                  )
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 25, right: 25,bottom: 25),
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -236,6 +245,7 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     hintText: 'Select an Option',
                     contentPadding: const EdgeInsets.all(18),
                   ),
+                  controller: relationshipController,
                 ),
               ),
               Row(
@@ -252,9 +262,13 @@ class _AdddependentPageState extends State<AdddependentPage> {
                                 0xff0A345E), // change text color of button
                           ),
                           onPressed: () {
+                            print(firstnameController);
+                            print(lastnameController);
+                            print(dateofbirthController);
+                            print(relationshipController);
                             Route route = MaterialPageRoute(
                                 builder: (context) =>
-                                const ReminderAppointPage());
+                                    const ReminderAppointPage());
                             Navigator.push(context, route);
                           },
                           child: const Text("Save"))),
@@ -264,27 +278,28 @@ class _AdddependentPageState extends State<AdddependentPage> {
                       width: 161,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            side:  const BorderSide(
+                            side: const BorderSide(
                               width: 1.0,
                               color: Color(0xff0A345E),
                             ),
-                            foregroundColor: const Color(
-                                0xff0A345E),
+                            foregroundColor: const Color(0xff0A345E),
                             // change background color of button
-                            backgroundColor: Colors.white, // change text color of button
+                            backgroundColor:
+                                Colors.white, // change text color of button
                           ),
                           onPressed: () {
+                            print(firstnameController);
+                            print(lastnameController);
+                            print(dateofbirthController);
+                            print(relationshipController);
                             Route route = MaterialPageRoute(
                                 builder: (context) =>
-                                const ReminderAppointPage());
+                                    const ReminderAppointPage());
                             Navigator.push(context, route);
                           },
                           child: const Text("Cancel"))),
                 ],
               ),
-    ]
-          )
-    )
-    );
+            ])));
   }
 }

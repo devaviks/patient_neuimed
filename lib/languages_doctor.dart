@@ -16,7 +16,9 @@ class _LanguagePageState extends State<LanguagePage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Languages"),
@@ -38,6 +40,7 @@ class _LanguagePageState extends State<LanguagePage> {
                             color: Color(0xff212121),
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
+                            height: 1.2
                           ),
                         ),
                       ),
@@ -68,7 +71,7 @@ class _LanguagePageState extends State<LanguagePage> {
                       )
                   ),
                   SizedBox(
-                    height: 590,
+                    height: 580,
                     child: Row(children: <Widget>[
                       Expanded(
                           child: Container(

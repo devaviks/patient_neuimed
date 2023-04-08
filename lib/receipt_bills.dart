@@ -16,7 +16,9 @@ class _ReceiptbillPageState extends State<ReceiptbillPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           actions: <Widget>[

@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient_neuimed/requested_record.dart';
 
+import 'myappointment/item_appointment/drawer.dart';
+
 class DownloaddataPage extends StatefulWidget {
   @override
   _DownloaddataPageState createState() => _DownloaddataPageState();
 }
 
 class _DownloaddataPageState extends State<DownloaddataPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   String radioButtonItem = 'ONE';
   int id = 1;
@@ -20,14 +23,18 @@ class _DownloaddataPageState extends State<DownloaddataPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: AppBar(
         backgroundColor: const Color(0xff0A345E),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            _key.currentState!.openDrawer();
+          },
           icon: const Icon(Icons.menu),
         ),
         title: const Text("Download Data"),
       ),
+        drawer: DrawerPage(),
         body: SingleChildScrollView(
         child: Column(children: [
 

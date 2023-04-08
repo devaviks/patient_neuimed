@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient_neuimed/prescription_test_resulted.dart';
 
+import 'myappointment/item_appointment/drawer.dart';
+
 class TestresultPage extends StatefulWidget {
   const TestresultPage({super.key});
 
@@ -10,6 +12,8 @@ class TestresultPage extends StatefulWidget {
 }
 
 class _TestresultPageState extends State<TestresultPage> {
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   String radioButtonItem = 'ONE';
   int id = 1;
@@ -24,14 +28,18 @@ class _TestresultPageState extends State<TestresultPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: AppBar(
         backgroundColor: const Color(0xff0A345E),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            _key.currentState!.openDrawer();
+          },
           icon: const Icon(Icons.menu),
         ),
         title: const Text("Test Results"),
       ),
+        drawer: DrawerPage(),
       body: SingleChildScrollView(
           child: Column(
             children: [

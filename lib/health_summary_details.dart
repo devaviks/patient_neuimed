@@ -2,23 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient_neuimed/visit_summary.dart';
 
+import 'myappointment/item_appointment/drawer.dart';
+
 class HealthdetailsPage extends StatefulWidget {
   @override
   _HealthdetailsPageState createState() => _HealthdetailsPageState();
 }
 
 class _HealthdetailsPageState extends State<HealthdetailsPage> {
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           backgroundColor: const Color(0xff0A345E),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
           title: const Text("Health Summary Details"),
         ),
+        drawer: DrawerPage(),
         body: SingleChildScrollView(
             child: Column(children: [
           Container(

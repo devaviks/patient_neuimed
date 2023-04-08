@@ -9,12 +9,18 @@ class AddhistoryPage extends StatefulWidget {
   _AddhistoryPageState createState() => _AddhistoryPageState();
 }
 class _AddhistoryPageState extends State<AddhistoryPage> {
+
+  TextEditingController diseaseController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back),
         ),
         title: Text("Add Family Medical History"),
@@ -49,6 +55,7 @@ class _AddhistoryPageState extends State<AddhistoryPage> {
                   hintText: 'Select',
                   contentPadding: const EdgeInsets.all(18),
                 ),
+                controller: diseaseController,
               ),
             ),
             Padding(
@@ -67,6 +74,7 @@ class _AddhistoryPageState extends State<AddhistoryPage> {
                   hintText: 'Write Something....',
                   contentPadding: EdgeInsets.all(18),
                 ),
+                controller: descriptionController,
               ),
             ),
             ),
@@ -84,6 +92,8 @@ class _AddhistoryPageState extends State<AddhistoryPage> {
                               0xff0A345E), // change text color of button
                         ),
                         onPressed: () {
+                          print(descriptionController);
+                          print(diseaseController);
                           Route route = MaterialPageRoute(
                               builder: (context) =>
                               const HistoryPage());
@@ -106,6 +116,8 @@ class _AddhistoryPageState extends State<AddhistoryPage> {
                           backgroundColor: Colors.white, // change text color of button
                         ),
                         onPressed: () {
+                          print(descriptionController);
+                          print(diseaseController);
                           Route route = MaterialPageRoute(
                               builder: (context) =>
                               const HistoryPage());

@@ -16,7 +16,9 @@ class _PopupPageState extends State<PopupPage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           title: Text("Book In-Clinic Appointment "),

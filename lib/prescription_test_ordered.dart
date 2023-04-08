@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:patient_neuimed/test_result.dart';
 import 'package:patient_neuimed/widget/neuimed_text.dart';
 
+import 'myappointment/item_appointment/drawer.dart';
+
 class PrescriptestPage extends StatefulWidget {
   const PrescriptestPage({super.key});
 
@@ -11,6 +13,9 @@ class PrescriptestPage extends StatefulWidget {
 }
 
 class _PrescriptestPageState extends State<PrescriptestPage> {
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
   String radioButtonItem = 'ONE';
   int id = 2;
 
@@ -21,14 +26,18 @@ class _PrescriptestPageState extends State<PrescriptestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
         appBar: AppBar(
           backgroundColor: const Color(0xff0A345E),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
             icon: const Icon(Icons.menu),
           ),
           title: const Text("Prescription wise Test Ordered"),
         ),
+        drawer: DrawerPage(),
         body: SingleChildScrollView(
             child: Column(children: [
           Padding(

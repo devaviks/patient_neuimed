@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'home_page.dart';
+import 'home_page/home_page.dart';
 import 'myappointment/item_appointment/drawer.dart';
 
 class ChangepassPage extends StatefulWidget {

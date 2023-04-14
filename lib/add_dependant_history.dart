@@ -75,7 +75,7 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     textStyle: const TextStyle(
                       color: Color(0xff707683),
                       fontWeight: FontWeight.w400,
-                      fontSize: 14,
+                      fontSize: 13,
                     ),
                   ),
                 ),
@@ -95,7 +95,7 @@ class _AdddependentPageState extends State<AdddependentPage> {
                     textStyle: const TextStyle(
                       color: Color(0xff707683),
                       fontWeight: FontWeight.w400,
-                      fontSize: 14,
+                      fontSize: 13,
                     ),
                   ),
                 ),
@@ -110,13 +110,14 @@ class _AdddependentPageState extends State<AdddependentPage> {
                   });
                 },
                 title: Text(
-                  "You have the legal authority to access information"
-                  " and make medical decisions on behalf of your child.",
+                  "You have the legal authority to access information\n"
+                  "and make medical decisions on behalf of your child.",
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
                       color: Color(0xff707683),
                       fontWeight: FontWeight.w400,
-                      fontSize: 14,
+                      fontSize: 13,
+                      height: 1.2
                     ),
                   ),
                 ),

@@ -43,7 +43,6 @@ class _SpecialistPageState extends State<SpecialistPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           )),
-                      child: Expanded(
                           child: Column(children: <Widget>[
                             SizedBox(
                               width: 172,
@@ -82,7 +81,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                             ),
 
 
-                          ]))))
+                          ])))
             ]),
 
             Column(children: [
@@ -94,7 +93,6 @@ class _SpecialistPageState extends State<SpecialistPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           )),
-                      child: Expanded(
                           child: Column(children: <Widget>[
                             SizedBox(
                               width: 172,
@@ -131,7 +129,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                               size: 12,
                               fontWeight: FontWeight.w500,
                             ),
-                          ]))))
+                          ])))
             ])
           ]),
 
@@ -145,7 +143,6 @@ class _SpecialistPageState extends State<SpecialistPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           )),
-                      child: Expanded(
                           child: Column(children: <Widget>[
                             SizedBox(
                               width: 172,
@@ -184,7 +181,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                             ),
 
 
-                          ]))))
+                          ])))
             ]),
 
             Column(children: [
@@ -196,7 +193,6 @@ class _SpecialistPageState extends State<SpecialistPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           )),
-                      child: Expanded(
                           child: Column(children: <Widget>[
                             SizedBox(
                               width: 172,
@@ -233,7 +229,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                               size: 12,
                               fontWeight: FontWeight.w500,
                             ),
-                          ]))))
+                          ])))
             ])
           ]),
           Padding(
@@ -395,7 +391,6 @@ class _SpecialistPageState extends State<SpecialistPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           )),
-                      child: Expanded(
                           child: Column(children: <Widget>[
                             SizedBox(
                               width: 172,
@@ -427,7 +422,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                             ),
 
 
-                          ]))))
+                          ])))
             ]),
 
             Column(children: [
@@ -440,7 +435,6 @@ class _SpecialistPageState extends State<SpecialistPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           )),
-                      child: Expanded(
                           child: Column(children: <Widget>[
                             SizedBox(
                               width: 172,
@@ -470,7 +464,7 @@ class _SpecialistPageState extends State<SpecialistPage> {
                               fontWeight: FontWeight.w500,
                             ),
 
-                          ]))))
+                          ])))
             ])
           ])
         ]);

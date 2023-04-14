@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient_neuimed/slots.dart';
+import 'package:patient_neuimed/slot_page/slots.dart';
 import 'package:patient_neuimed/widget/neuimed_text.dart';
 
 class DoctorfoundPage extends StatefulWidget {
